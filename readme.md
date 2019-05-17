@@ -36,4 +36,3 @@
 - When creating new paths, click and drag from point to point. New path will snap to the closest already existing waypoints, if it is withing tolerance.
 
 - Windridge City Demo Scene doesn't have any lighting data baked in and therefore the scene has to be baked before it can be used comfortably.
-- The car model supplied with the project is not optimal and probably should not be used unless a lot of tweaking is made.  
