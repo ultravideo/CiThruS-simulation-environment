@@ -17,6 +17,8 @@ public class PedestrianHiveMind : MonoBehaviour
     private List<Vector3[]> pedestrianPaths = new List<Vector3[]>();
     private NavMeshPath navPath;
 
+    private Vector3 maxBounds = new Vector3(1000, 1000, 1000);
+
 
     private void Start()
     {
@@ -49,10 +51,10 @@ public class PedestrianHiveMind : MonoBehaviour
             GameObject ins;
 
             //newPedestrian.GetComponent<PedestrianSlave>().InitData(this);
-            if (newSpawnPoint != Vector3.positiveInfinity || newSpawnPoint != Vector3.negativeInfinity)
-                ins = Instantiate(newPedestrian, newSpawnPoint, Quaternion.identity);
-            else
+            if (Mathf.Abs(newSpawnPoint.x) > maxBounds.x || Mathf.Abs(newSpawnPoint.y) > maxBounds.y || Mathf.Abs(newSpawnPoint.z) > maxBounds.z)
                 continue;
+            else
+                ins = Instantiate(newPedestrian, newSpawnPoint, Quaternion.identity);
 
             if (Mathf.Abs(ins.transform.position.y - newSpawnPoint.y) > 0.3f)
             {
