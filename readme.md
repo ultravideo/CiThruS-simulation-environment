@@ -1,3 +1,9 @@
+## Important Notice
+
+This repository is for the old Unity version of CiThruS and will no longer be updated. Development has shifted to the new Unreal Engine-based CiThruS2, which has its own repository [here](https://github.com/ultravideo/CiThruS2).
+
+## Controls
+
 - Toggle cursorlock by pressing O
 - Move camera with W, A, S, D
 - Ascend with Q, descend with E
